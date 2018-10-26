@@ -1,22 +1,14 @@
-function combsort(array input)
-    gap := input.size //initialize gap size
-    loop until gap = 1 and swaps = 0
-        //update the gap value for a next comb. Below is an example
-        gap := int(gap / 1.25)
-        if gap < 1
-          //minimum gap is 1
-          gap := 1
-        end if
-        i := 0
-        swaps := 0 //see Bubble Sort for an explanation
-        //a single "comb" over the input list
-        loop until i + gap >= input.size //see Shell sort for similar idea
-            if input[i] > input[i+gap]
-                swap(input[i], input[i+gap])
-                swaps := 1 // Flag a swap has occurred, so the
-                           // list is not guaranteed sorted
-            end if
-            i := i + 1
-        end loop
-    end loop
-end function
+def combsort(numbers_list):
+	ordered = numbers_list.copy()
+	gap = len(numbers_list) # initial gap (first and last element)
+	swaps = True
+	while swaps or gap!=1: 
+		swaps = False
+		for i in range(len(numbers_list)-gap):
+			if ordered[i] > ordered[i+gap]: # swaps without extra variable
+				ordered[i] = ordered[i+gap] - ordered[i]
+				ordered[i+gap] = ordered[i+gap] - ordered[i]
+				ordered[i] = ordered[i+gap] + ordered[i]
+				swaps = True
+		gap = max(gap-1, 1)	# update gap, minimum gap is 1
+	return ordered
