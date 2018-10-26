@@ -8,50 +8,59 @@ sortedNums = sorted(nums)
 try:
     from bubble import bubble
     if(bubble(list(nums)) == sortedNums):
-        print "bubblesort success!"
+        print("bubblesort success!")
     else:
-        print "bubblesort incorrect."
+        print("bubblesort incorrect.")
 except:
-    print "bubblesort function errored or is incomplete."
+    print("bubblesort function errored or is incomplete.")
 try:
     from insertion import insertion
     if(insertion(list(nums)) == sortedNums):
-        print "insertionsort success!"
+        print("insertionsort success!")
     else:
-        print "insertionsort incorrect."
+        print("insertionsort incorrect.")
 except:
-    print "insertionsort function errored or is incomplete."
+    print("insertionsort function errored or is incomplete.")
 try:
     from merge import mergesort
     if(mergesort(list(nums)) == sortedNums):
-        print "mergesort success!"
+        print("mergesort success!")
     else:
-        print "mergesort incorrect."
+        print("mergesort incorrect.")
 except:
-    print "mergesort function errored or is incomplete."
+    print("mergesort function errored or is incomplete.")
 try:
     from quick import quick
     if(quick(list(nums)) == sortedNums):
-        print "quicksort success!"
+        print("quicksort success!")
     else:
-        print "quicksort incorrect."
+        print("quicksort incorrect.")
 except:
-    print "quicksort function errored or is incomplete."
+    print("quicksort function errored or is incomplete.")
 
 try:
     from heap import heap
     if(heap(list(nums)) == sortedNums):
-        print "Heap Sort success!"
+        print("Heap Sort success!")
     else:
-        print "Heap Sort incorrect."
+        print("Heap Sort incorrect.")
 except:
-    print "Heapsort function errored or is incomplete."
+    print("Heapsort function errored or is incomplete.")
 
 try:
     from bucket import bucket
     if(bucket(list(nums)) == sortedNums):
-        print "Bucket Sort success"
+        print("Bucket Sort success.")
     else:
-        print "Bucket Sort incorrect"
+        print("Bucket Sort incorrect.")
 except:
-    print "Bucketsort function errored or is incomplete"
+    print("Bucketsort function errored or is incomplete.")
+    
+try:
+    from combsort import combsort
+    if(combsort(list(nums)) == sortedNums):
+        print("Comb Sort success biatch!")
+    else:
+        print("Comb Sort incorrect.")
+except:
+    print("Comb Sort function errored or is incomplete.")
